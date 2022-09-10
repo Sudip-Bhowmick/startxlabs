@@ -1,0 +1,35 @@
+.circular-box{
+    background-color: #4747EC14;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+}
+
+#web-technologies .flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 44px;
+    row-gap: 56px;
+}
+/* #web-technologies .flex > div{
+    width: calc(100%/6);
+} */
+#web-technologies .flex .circular-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#web-technologies .flex p{
+    padding-top: 12px;
+}
+
+@media(max-width: 767px){
+    .circular-box{
+        width: 150px;
+        height: 150px;
+    }
+    #web-technologies .flex{
+        justify-content: center;
+    }
+}
