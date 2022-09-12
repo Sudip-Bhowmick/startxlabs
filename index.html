@@ -12,11 +12,235 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/header.js"></script>
 </head>
 
 <body>
     <main>
+        <header class="header">
+            <div class="container">
+                <nav class="navbar">
+                    <a href="javascript:void(0)" class="brand">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <button type="button" class="burger" id="burger">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+                    <span class="overlay" id="overlay"></span>
+                    <div class="menu" id="menu">
+                        <ul class="menu-block">
+                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Services</a></li>
+                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Portfolio</a></li>
+                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">How we work</a></li>
+                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Technology</a></li>
+                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Contact Us</a></li>
+                            <li class="menu-item"><a class="menu-link btn-1" href="javascript:void(0)">Start A
+                                    Project</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section id="hero" class="pt_40">
+            <div class="blur">
+                <img src="img/blur.png" class="img-responsive">
+            </div>
+            <div class="container">
+                <div class="grid two-equal-col">
+                    <div class="pt_40">
+                        <h1 class="text_lg regular">
+                            We <strong>Design, Develop</strong> and <br>
+                            <strong>Market</strong> state-of-the-art <br>
+                            digital solutions for you
+                        </h1>
+                        <p class="grey pt_40 medium">
+                            Design, Web & App Development executed with
+                            <span class="blue bold">Strategy, Experience and Expertise</span>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="form">
+                            <form>
+                                <input type="text" name="name" id="name" placeholder="Name *" required="">
+                                <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
+                                    required="">
+                                <input type="email" name="emailId" id="emailId" placeholder="Email ID *" required="">
+                                <textarea name="message" id="message" cols="30" rows="7"
+                                    placeholder="Message..."></textarea>
+
+                                <input type="submit" value="Submit" class="btn-1 full-width mt_16">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="counters" class="pt_120">
+            <div class="container">
+                <div class="flex pb_60">
+                    <div>
+                        <p class="justify medium">
+                            StartxLabs provide expert software design and development services so you can create
+                            innovative world-class products. Our offshore development teams deliver the benefits of tech
+                            expertise. We work hard to deliver 100% client satisfaction and get growth for our
+                            customer's business.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="counter-box special">
+                            <div class="number">
+                                <span>110</span><span>+</span>
+                            </div>
+                            <p>Happy Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex three-equal-col">
+                    <div class="counter-box">
+                        <div class="number">
+                            <span>100</span><span>+</span>
+                        </div>
+                        <p>Engineers and consultants</p>
+                    </div>
+                    <div class="counter-box">
+                        <div class="number">
+                            <span>08</span><span>+</span>
+                        </div>
+                        <p>years of Experience</p>
+                    </div>
+                    <div class="counter-box">
+                        <div class="number">
+                            <span>50</span><span>+</span>
+                        </div>
+                        <p>Global Brands and Enterprises Served</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="pt_60">
+            <div class="container">
+                <div class="grid three-equal-col">
+                    <div class="text-center">
+                        <img src="img/review-01.png" class="img-responsive">
+                    </div>
+                    <div class="text-center">
+                        <img src="img/review-02.png" class="img-responsive">
+                    </div>
+                    <div class="text-center">
+                        <img src="img/review-03.png" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt_155">
+            <div class="container-left">
+                <div class="servicesSliderTwo">
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Mobile Application Development</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Web Application Development</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Website & CMS Development</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Cloud Solutions</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Digital Marketing</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Data, BI, & Analytics Consulting Services</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>DevOps Services and Solutionss</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Quality & Perfor-mance Engineering</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>Blockchain</h3>
+                    </div>
+                    <div class="service-box">
+                        <img src="img/cloud.svg" alt="cloud">
+                        <h3>No Code solutions</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cards" class="">
+            <div class="container">
+                <h2 class="blue regular text_xxl pb_60">
+                    Let's <strong>build</strong> something<br>
+                    <strong>together</strong> that matters
+                </h2>
+                <a href="javascript:void(0)" class="btn-1">Contact Us</a>
+                <div class="flex pt_120">
+                    <div class="card-item">
+                        <img src="img/card-01.jpg" alt="card-01">
+                        <h3 class="text_med pt_40 pb_16">Lorem ipsum dolor sit amet, </h3>
+                        <p class="pb_30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum massa congue ultricies
+                            quam pulvinar molestie.
+                        </p>
+                        <a href="javascript:void(0)" class="btn-2">View</a>
+                    </div>
+
+                    <div class="card-item">
+                        <img src="img/card-02.jpg" alt="card-01">
+                        <h3 class="text_med pt_40 pb_16">Lorem ipsum dolor sit amet, </h3>
+                        <p class="pb_30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum massa congue ultricies
+                            quam pulvinar molestie.
+                        </p>
+                        <a href="javascript:void(0)" class="btn-2">View</a>
+                    </div>
+
+                    <div class="card-item">
+                        <img src="img/card-03.jpg" alt="card-01">
+                        <h3 class="text_med pt_40 pb_16">Lorem ipsum dolor sit amet, </h3>
+                        <p class="pb_30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum massa congue ultricies
+                            quam pulvinar molestie.
+                        </p>
+                        <a href="javascript:void(0)" class="btn-2">View</a>
+                    </div>
+
+                    <div class="card-item">
+                        <img src="img/card-04.jpg" alt="card-01">
+                        <h3 class="text_med pt_40 pb_16">Lorem ipsum dolor sit amet, </h3>
+                        <p class="pb_30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum massa congue ultricies
+                            quam pulvinar molestie.
+                        </p>
+                        <a href="javascript:void(0)" class="btn-2">View</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section id="web-technologies" class="pt_155 pb_155">
             <div class="container">
                 <h2 class="bold text_xl pb_16">Web and Mobile App Technologies </h2>
@@ -25,43 +249,43 @@
                 <div class="flex pt_88">
                     <div>
                         <div class="circular-box">
-                            <img src="img/python.png" alt="python">
+                            <img src="img/python.png" alt="python" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Python</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/postgre.png" alt="PostgreSQL">
+                            <img src="img/postgre.png" alt="PostgreSQL" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">PostgreSQL</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/node.png" alt="node">
+                            <img src="img/node.png" alt="node" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Node Js</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/mysql.png" alt="mysql">
+                            <img src="img/mysql.png" alt="mysql" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">My SQL</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/mongodb.png" alt="mongodb">
+                            <img src="img/mongodb.png" alt="mongodb" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">MongoDB</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/html.png" alt="html">
+                            <img src="img/html.png" alt="html" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">HTML5</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/django.png" alt="django">
+                            <img src="img/django.png" alt="django" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Django</p>
                     </div>
@@ -69,29 +293,29 @@
                         <div class="circular-box">
                             <img src="img/css.png" alt="css">
                         </div>
-                        <p class="text_xxxs semi-bold text-center">CSS3</p>
+                        <p class="text_xxxs semi-bold text-center" class="img-fluid">CSS3</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/react.png" alt="react">
+                            <img src="img/react.png" alt="react" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">React Js</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/vue.png" alt="vue">
+                            <img src="img/vue.png" alt="vue" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Vue Js</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/shopify.png" alt="shopify">
+                            <img src="img/shopify.png" alt="shopify" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Shopify</p>
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Wordpress</p>
                     </div>
@@ -103,14 +327,289 @@
             </div>
         </section>
 
-        <section id="why">
-            <div class="container">
-                <h2 class="text_xxl medium">Why <br>
+        <section id="why" class="pb_88">
+            <div class="container-left">
+                <h2 class="text_xxl medium mob-text-center">Why <br>
                     <span class="text_xxl bold">Us.</span>
                 </h2>
+
+                <div class="testimonialSlider pt_40">
+                    <div>
+                        <div class="image">
+                            <img src="img/01.png">
+                        </div>
+                        <div class="name">Jake Hansen</div>
+                        <p>
+                            We have been working with Startxlabs for nearly two years and have been happy working with
+                            the <a href="javascript:void(0)">read more...</a>
+                        </p>
+                        <div class="designation">Founder</div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="img/02.png">
+                        </div>
+                        <div class="name">Brandon Raganx</div>
+                        <p>
+                            We would like to put a “Seal of Trust” on how the team did a professional job in developing
+                            TireJect. <a href="javascript:void(0)">read more...</a>
+                        </p>
+                        <div class="designation">Founder</div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="img/03.png">
+                        </div>
+                        <div class="name">Tavo Zambrano</div>
+                        <p>
+                            With the team’s professionalism, prompt response, and courteous service, we <a
+                                href="javascript:void(0)">read
+                                more...</a>
+                        </p>
+                        <div class="designation">Founder</div>
+                    </div>
+                    <div>
+                        <div class="image">
+                            <img src="img/04.png">
+                        </div>
+                        <div class="name">Ashok Pundit</div>
+                        <p>
+                            Right from the “Idea” of Amar Ujala, and till it was a “Reality”, they have been developing
+                            our <a href="javascript:void(0)">read more...</a>
+                        </p>
+                        <div class="designation">Founder</div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <section id="contact" class="black_bg pt_120 pb_120">
+            <div class="container">
+                <div class="grid two-equal-col">
+                    <div>
+                        <img src="img/digital.png" alt="digital" class="img-fluid">
+                    </div>
+                    <div>
+                        <h2 class="white text_xxl regular">
+                            Craft your <strong>idea</strong> <br>into an exceptional <br><strong>digital
+                                experience</strong>
+                        </h2>
+                        <div class="pt_80">
+                            <a href="javascript:void(0)" class="btn-1">Let’s Talk</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-flex pt_88">
+                    <div class="mt_16">
+                        <h3 class="bold text_md white">
+                            Looking for a custom website or mobile app development partner?
+                        </h3>
+                        <p class="text_xs pt_30 white">We are always available to collaborate in our clients time zone
+                        </p>
+                        <div class="pt_88">
+                            <a href="javascript:void(0)" class="btn-1">Let's Connect! </a>
+                        </div>
+                        <div class="contact-details pt_120">
+                            <div class="icon-box white">
+                                <div>
+                                    <img src="img/mail.svg" alt="mail">
+                                </div>
+                                <div>
+                                    <a href="mailto:hello@startxlabs.com" class="white">hello@startxlabs.com</a>
+                                </div>
+                            </div>
+                            <div class="icon-box white">
+                                <div>
+                                    <img src="img/phone.svg" alt="phone">
+                                </div>
+                                <div>
+                                    <a href="tel:+9198187 88321" class="white">+91 98187 88321</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-details pt_40">
+                            <div class="icon-box white">
+                                <div>
+                                    <img src="img/map-pin.svg" alt="/map-pin">
+                                </div>
+                                <div>
+                                    <p class="white">
+                                        264, Udyog Vihar Phase-1, Sec-20 <br>
+                                        Gurugram, Haryana 122016, India
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form dark">
+                            <form>
+                                <input type="text" name="name" id="name" placeholder="Name *" required>
+                                <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
+                                    required>
+                                <input type="email" name="emailId" id="emailId" placeholder="Email ID *" required>
+                                <textarea name="message" id="message" cols="30" rows="7"
+                                    placeholder="Message..."></textarea>
+
+                                <input type="submit" value="Submit" class="btn-1 full-width mt_16">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="pt_60 pb_16">
+            <div class="container">
+                <div class="footer-flex">
+                    <div>
+                        <img src="img/footer-logo.png" alt="logo">
+                        <p class="bold pt_30 pb_30">Top Offshore custom software design <br>
+                            and development company</p>
+                        <div class="social-links">
+                            <a href="javascript:void(0)"><img src="img/facebook.svg" alt="facebook"></a>
+                            <a href="javascript:void(0)"><img src="img/twitter.svg" alt="twitter"></a>
+                            <a href="javascript:void(0)"><img src="img/linkedin.svg" alt="linkedin"></a>
+                            <a href="javascript:void(0)"><img src="img/instagram.svg" alt="instagram"></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="bold text_xxs">Quick Links</h3>
+                        <div class="quick-links mt_16">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Case Studies</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Our Services</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Technologies</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Clients</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h3 class="bold text_xxs">Resources</h3>
+                        <div class="quick-links mt_16">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">Blogs</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">Terms and Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h3 class="bold text_xxs">Contact</h3>
+                        <div class="quick-links mt_16">
+                            <div class="icon-box gap-8">
+                                <div class="text_sm">
+                                    <img src="img/call.svg" alt="call">
+                                </div>
+                                <div class="text_sm">
+                                    <a class="text_sm black" href="tel:+919818788321">+91 98187 88321</a>
+                                </div>
+                            </div>
+                            <div class="icon-box gap-8">
+                                <div class="text_sm">
+                                    <img src="img/dashicons_email.svg" alt="mail">
+                                </div>
+                                <div class="text_sm">
+                                    <a class="text_sm black" href="mailto:hello@startxlabs.com">hello@startxlabs.com</a>
+                                </div>
+                            </div>
+                            <div class="icon-box gap-8">
+                                <div class="text_sm">
+                                    <img src="img/pin.svg" alt="pin">
+                                </div>
+                                <div class="text_sm">
+                                    <p class="text_sm">
+                                        264, Udyog Vihar Phase-1, <br>
+                                        Sec-20 Gurugram, Haryana <br>
+                                        122016, India
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+        $('.testimonialSlider').slick({
+            variableWidth: true,
+            arrows: true,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        variableWidth: false,
+                        slidesToShow: 1,
+                        arrows: false,
+                    }
+                }
+            ]
+        })
+
+        $('.servicesSliderTwo').slick({
+            variableWidth: true,
+            arrows: false,
+            dots: false,
+            loop: false,
+            infinite: false,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        variableWidth: false,
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        })
+
+        $(window).on('load resize', function () {
+            var totalSlide = $('.slick-dots li').length;
+            $('.slick-dots li').css('width', 'calc(100% / ' + totalSlide + ')')
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('header').addClass("white");
+            }
+            else {
+                $('header').removeClass("white");
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>
