@@ -235,7 +235,7 @@
 }
 
 .text_xxxl{
-    font-size: 64px;
+    font-size: 62px;
 }
 
 .regular{
@@ -491,6 +491,7 @@ ul.slick-dots li button::before{
 
 .form{
     width: 530px;
+    max-width: 100%;
     border:none;
     border-radius: 46px;
     padding: 60px 55px 37px;
@@ -569,5 +570,33 @@ input[type="button"]{
     }
     ul.slick-dots {
         max-width: 100%
+    }
+    .grid.two-equal-col{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 30px;
+    }
+    .grid.three-equal-col {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .text_lg {
+        font-size: 30px;
+    }
+    .form{
+        padding: 40px 30px 30px;
+    }
+    .pt_40 {
+        padding-top: 20px;
+    }
+    .pt_155 {
+        padding-top: 100px;
+    }
+    .text_xxxl {
+        font-size: 34px;
+    }
+}
+
+@media(max-width: 320px){
+    .text_lg {
+        font-size: 22px;
     }
 }

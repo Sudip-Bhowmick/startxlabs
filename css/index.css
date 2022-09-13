@@ -8,6 +8,10 @@ h1{
     left: 0;
 }
 
+.servicesSliderOne {
+    padding-bottom: 0 !important;
+}
+
 #counters .flex:not(.three-equal-col){
     display: flex;
     gap: 70px;
@@ -67,6 +71,7 @@ h1{
     margin-block: 20px;
     padding: 20px;
     cursor: pointer;
+    transition: .3s;
 }
 .service-box img{
     margin-top: 50px;
@@ -80,6 +85,12 @@ h1{
 
 .service-box:hover img{
     rotate: 180deg;
+}
+
+.service-box.slick-current{
+    width: 326px;
+    background-color: var(--blue);
+    color: #fff;
 }
 
 .circular-box{
@@ -121,6 +132,12 @@ h1{
 .card-item{
     max-width: 550px;
     width: 100%;
+}
+.card-item img{
+    transition: .3s ease-out;
+}
+.card-item img:hover{
+    transform: scale(1.04)!important;
 }
 .card-item p{
     color: var(--grey);
@@ -247,5 +264,30 @@ h1{
     h2 br{display: none;}
     .mob-text-center{
         text-align: center;
+    }
+
+    
+    #counters .flex:not(.three-equal-col){
+        flex-direction: column;
+        gap: 40px;
+    }
+    #counters .flex:not(.three-equal-col) > div:first-child,
+    #counters .flex:not(.three-equal-col) > div:last-child {
+        width: 100% !important;
+    }
+    .counter-box.special .number {
+        font-size: 100px;
+    }
+    .counter-box.special p {
+        font-size: 22px;
+    }
+    .counter-box .number {
+        font-size: 32px;
+    }
+    .counter-box p {
+        font-size: 12px;
+    }
+    .counter-box {
+        padding: 15px;
     }
 }
