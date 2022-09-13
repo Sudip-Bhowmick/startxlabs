@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="js/header.js"></script>
 </head>
 
 <body>
@@ -768,6 +767,7 @@
     </main>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/header.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
     <script>
@@ -785,6 +785,15 @@
                     }
                 }
             ]
+        })
+
+        $('#reviews .grid').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            // loop: false,
+            // infinite: false,
         })
 
         // $('.servicesSliderOne').slick({
@@ -818,7 +827,7 @@
 
         var servicesSliderOne = new Splide('.servicesSliderOne', {
             type: 'fade',
-            pagination: true,
+            pagination: false,
             arrows: false,
             cover: true,
         });
