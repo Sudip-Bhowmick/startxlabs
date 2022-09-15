@@ -13,6 +13,25 @@
     --grey: #8F8F9B;
 }
 
+.cursor{
+    height: 0;
+    width: 0;
+    position: fixed;
+    border-radius: 50%;
+    mix-blend-mode: exclusion;
+    background: #fff;
+    opacity: 0;
+    transition: opacity .4s ease-out,height .4s ease-out,width .4s ease-out;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+
+section{
+    z-index: 1;
+    position: relative;
+}
 /* start header */
 .header {
     position: -webkit-sticky;
@@ -497,6 +516,7 @@ ul.slick-dots li button::before{
     padding: 60px 55px 37px;
     margin: auto;
     margin-right: 0;
+    cursor: default;
 }
 .form input:not([type="submit"]),
 .form textarea{
@@ -513,6 +533,8 @@ ul.slick-dots li button::before{
 }
 .form:not(.dark){
     box-shadow: -16px 16px 24px 0px #0000001A;
+    background-color: #fff;
+    position: relative;
 }
 .form.dark{
     border: 4px solid #262D8C;
@@ -578,10 +600,14 @@ input[type="button"]{
 
 @media(max-width: 767px){
     *, html, body{
-        font-size: 18px;
+        font-size: 14px;
     }
     ul.slick-dots {
-        max-width: 100%
+        max-width: 100%;
+        text-align: center;
+    }
+    .form input:not([type="submit"]), .form textarea, .btn-1{
+        font-size: 14px;
     }
     .grid.two-equal-col{
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -649,9 +675,24 @@ input[type="button"]{
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+    .quick-links li{
+        margin-bottom: 14px;
+    }
     .footer-flex > div:first-child{
         grid-column: span 2;
         width: 100%;
+    }
+    .social-links{
+        justify-content: space-evenly;
+    }
+    .footer-flex > div:first-child {
+        text-align: center;
+    }
+    .footer-flex > div:first-child .bold {
+        font-size: 24px;
+        text-align: center;
+        max-width: 300px;
+        margin: auto;
     }
     .footer-flex br{
         display: none;

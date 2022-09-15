@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -48,9 +50,58 @@
             </div>
         </header>
 
-        <section id="hero" class="pt_40">
+        <section id="hero" class="pt_40 pb_155">
+
+            <div class="cursor"></div>
+
+            <script>
+                function myFunc() {
+                    var cursor = document.querySelector('.cursor');
+                    var links = document.querySelectorAll('a');
+
+                    var xMousePos = 0;
+                    var yMousePos = 0;
+                    var lastScrolledLeft = 0;
+                    var lastScrolledTop = 0;
+
+                    $(document).mousemove(function (event) {
+                        captureMousePosition(event);
+                    })
+
+                    $(window).scroll(function (event) {
+                        if (lastScrolledLeft != $(document).scrollLeft()) {
+                            xMousePos -= lastScrolledLeft;
+                            lastScrolledLeft = $(document).scrollLeft();
+                            xMousePos += lastScrolledLeft;
+                        }
+                        if (lastScrolledTop != $(document).scrollTop()) {
+                            yMousePos -= lastScrolledTop;
+                            lastScrolledTop = $(document).scrollTop();
+                            yMousePos += lastScrolledTop;
+                        }
+                        window.status = "x = " + xMousePos + " y = " + yMousePos;
+                    });
+                    function captureMousePosition(event) {
+                        xMousePos = event.pageX;
+                        yMousePos = event.pageY;
+                    }
+
+                    var editCursor = function editCursor(event) {
+                        cursor.style.left = xMousePos + 'px';
+                        cursor.style.top = yMousePos + 'px';
+                    };
+
+                    window.addEventListener('mousemove', editCursor);
+                    window.addEventListener('scroll', editCursor);
+                }; myFunc();
+            </script>
+
+
             <div class="blur">
                 <img src="img/blur.png" class="img-responsive">
+            </div>
+            <div class="blur2">
+                <img src="img/blur-2.png" class="img-responsive">
             </div>
             <div class="container">
                 <div class="grid two-equal-col">
@@ -103,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex three-equal-col">
+                <div class="flex three-equal-col pb_16">
                     <div class="counter-box">
                         <div class="number">
                             <span>100</span><span>+</span>
@@ -145,13 +196,14 @@
         <section class="pt_155">
             <div class="container">
 
+
                 <div class="servicesSliderOne">
                     <div class="splide__track">
                         <div class="splide__list">
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Mobile Application Development</h3>
                                             <p class="pt_40">
@@ -168,7 +220,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Web Application Development</h3>
                                             <p class="pt_40">
@@ -185,7 +237,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Website & CMS Development</h3>
                                             <p class="pt_40">
@@ -202,7 +254,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Cloud Solutions</h3>
                                             <p class="pt_40">
@@ -219,7 +271,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Digital Marketing</h3>
                                             <p class="pt_40">
@@ -236,7 +288,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Data, BI, & Analytics Consulting Services</h3>
                                             <p class="pt_40">
@@ -253,7 +305,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">DevOps Services and Solutionss</h3>
                                             <p class="pt_40">
@@ -270,7 +322,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Quality & Perfor-mance Engineering</h3>
                                             <p class="pt_40">
@@ -287,7 +339,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">Blockchain</h3>
                                             <p class="pt_40">
@@ -304,7 +356,7 @@
                             <div class="splide__slide">
                                 <div>
                                     <div class="grid two-equal-col">
-                                        <div></div>
+                                        <div><img src="img/service-img-1.png" class="img-responsive"></div>
                                         <div>
                                             <h3 class="text_xxxl">No Code solutions</h3>
                                             <p class="pt_40">
@@ -323,81 +375,379 @@
                     </div>
                 </div>
 
+                <!-- <div class="servicesSliderOne">
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Mobile Application Development</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Web Application Development</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Website & CMS Development</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Cloud Solutions</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Digital Marketing</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Data, BI, & Analytics Consulting Services</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">DevOps Services and Solutionss</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Quality & Perfor-mance Engineering</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">Blockchain</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div>
+                                    <div class="grid two-equal-col">
+                                        <div>
+                                            <img src="img/service-img-1.png" class="img-responsive">
+                                        </div>
+                                        <div>
+                                            <h3 class="text_xxxl">No Code solutions</h3>
+                                            <p class="pt_40">
+                                                Lorem ipsum dolor sit amet,consectetur adipiscing elit. Lorem proin
+                                                habitant non
+                                                vulputate
+                                                sollicitudin ipsum congue vel.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+
             </div>
 
             <div class="container-left">
+
                 <div class="servicesSliderTwo pt_60">
 
                     <div class="splide__track">
                         <div class="splide__list">
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-01.png" alt="traced" class="traced">
+                                    <img src="img/s-02.png" alt="cloud">
                                     <h3>Mobile Application Development</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-02.png" alt="traced" class="traced">
+                                    <img src="img/s-02.png" alt="cloud">
                                     <h3>Web Application Development</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-03.png" alt="traced" class="traced">
+                                    <img src="img/s-03.png" alt="cloud">
                                     <h3>Website & CMS Development</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-04.png" alt="traced" class="traced">
+                                    <img src="img/s-04.png" alt="cloud">
                                     <h3>Cloud Solutions</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-05.png" alt="traced" class="traced">
+                                    <img src="img/s-05.png" alt="cloud">
                                     <h3>Digital Marketing</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-06.png" alt="traced" class="traced">
+                                    <img src="img/s-06.png" alt="cloud">
                                     <h3>Data, BI, & Analytics Consulting Services</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-07.png" alt="traced" class="traced">
+                                    <img src="img/s-07.png" alt="cloud">
                                     <h3>DevOps Services and Solutionss</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-08.png" alt="traced" class="traced">
+                                    <img src="img/s-08.png" alt="cloud">
                                     <h3>Quality & Perfor-mance Engineering</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-09.png" alt="traced" class="traced">
+                                    <img src="img/s-09.png" alt="cloud">
                                     <h3>Blockchain</h3>
                                 </div>
                             </div>
                             <div class="splide__slide">
                                 <div class="service-box">
-                                    <img src="img/cloud.svg" alt="cloud">
+                                    <img src="img/traced-10.png" alt="traced" class="traced">
+                                    <img src="img/s-10.png" alt="cloud">
+                                    <h3>No Code solutions</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="servicesSliderTwo pt_60">
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-01.png" alt="traced" class="traced">
+                                    <img src="img/s-02.png" alt="cloud">
+                                    <h3>Mobile Application Development</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-02.png" alt="traced" class="traced">
+                                    <img src="img/s-02.png" alt="cloud">
+                                    <h3>Web Application Development</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-03.png" alt="traced" class="traced">
+                                    <img src="img/s-03.png" alt="cloud">
+                                    <h3>Website & CMS Development</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-04.png" alt="traced" class="traced">
+                                    <img src="img/s-04.png" alt="cloud">
+                                    <h3>Cloud Solutions</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-05.png" alt="traced" class="traced">
+                                    <img src="img/s-05.png" alt="cloud">
+                                    <h3>Digital Marketing</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-06.png" alt="traced" class="traced">
+                                    <img src="img/s-06.png" alt="cloud">
+                                    <h3>Data, BI, & Analytics Consulting Services</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-07.png" alt="traced" class="traced">
+                                    <img src="img/s-07.png" alt="cloud">
+                                    <h3>DevOps Services and Solutionss</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-08.png" alt="traced" class="traced">
+                                    <img src="img/s-08.png" alt="cloud">
+                                    <h3>Quality & Perfor-mance Engineering</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-09.png" alt="traced" class="traced">
+                                    <img src="img/s-09.png" alt="cloud">
+                                    <h3>Blockchain</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="service-box">
+                                    <img src="img/traced-10.png" alt="traced" class="traced">
+                                    <img src="img/s-10.png" alt="cloud">
                                     <h3>No Code solutions</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
+                </div> -->
+
             </div>
         </section>
 
-        <section id="cards" class="">
+        <section id="cards" class="pt_120 pb_60">
             <div class="container">
                 <h2 class="blue regular text_xxl pb_60">
                     Let's <strong>build</strong> something<br>
@@ -449,7 +799,7 @@
             </div>
         </section>
 
-        <section id="web-technologies" class="pt_155 pb_155">
+        <section id="web-technologies" class="pt_88 pb_60">
             <div class="container">
                 <h2 class="bold text_xl pb_16">Web and Mobile App Technologies </h2>
                 <p class="medium capitalize">We gained expertise over the years</p>
@@ -535,7 +885,7 @@
             </div>
         </section>
 
-        <section id="why" class="pb_88">
+        <section id="why" class="pt_88 pb_88">
             <div class="container-left">
                 <h2 class="text_xxl medium mob-text-center">Why <br>
                     <span class="text_xxl bold">Us.</span>
@@ -766,10 +1116,10 @@
         </footer>
     </main>
 
-    <script src="js/jquery.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
     <script>
         $('.testimonialSlider').slick({
             variableWidth: true,
@@ -817,70 +1167,104 @@
                 }
             });
         }
+        document.addEventListener("DOMContentLoaded", function () {
+            const thumbnails = new Splide('.servicesSliderTwo', {
+                rewind: true,
+                autoWidth: true,
+                isNavigation: true,
+                gap: 10,
+                arrows: false,
+                // focus: 'center',
+                pagination: false,
+                cover: true,
+            }).mount();
 
-        // $('#reviews .grid').slick({
+            const servicesSliderOne = new Splide('.servicesSliderOne', {
+                type: 'slide',
+                pagination: false,
+                arrows: false,
+                cover: true,
+            });
+
+            servicesSliderOne.sync(thumbnails).mount();
+
+        });
+
+        // var mySwiperOne = new Swiper('.servicesSliderOne .swiper-container', {
+        //     speed: 400,
+        //     effect: 'fade',
+        //     spaceBetween: 100,
+        //     initialSlide: 0,
+        //     //truewrapper adoptsheight of active slide
+        //     autoHeight: false,
+        //     // Optional parameters
+        //     direction: 'horizontal',
+        //     slidesPerView: 1,
+        // });
+
+        // var mySwiperTwo = new Swiper('.servicesSliderTwo .swiper-container', {
+        //     slidesPerView: "auto",
+        //     speed: 400,
+        //     effect: 'slide',
+        //     spaceBetween: 20,
+        //     direction: 'horizontal',
+        //     grabCursor: true,
+        //     slideToClickedSlide: true,
+        //     centeredSlides: false,
+        //     freeMode: true,
+        // });
+
+        // mySwiperOne.controller.control = mySwiperTwo;
+        // mySwiperTwo.controller.control = mySwiperOne;
+
+
+        // $('.servicesSliderOne .swiper-wrapper').slick({
         //     slidesToShow: 1,
         //     slidesToScroll: 1,
         //     arrows: false,
-        //     dots: true,
-        //     // loop: false,
-        //     // infinite: false,
-        // })
-
-        // $('.servicesSliderOne').slick({
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     arrows: false,
-        //     // loop: false,
-        //     // infinite: false,
         //     fade: true,
-        //     asNavFor: '.servicesSliderTwo'
-        // })
-        // $('.servicesSliderTwo').slick({
-        //     variableWidth: true,
-        //     arrows: false,
-        //     dots: false,
-        //     loop: true,
-        //     // infinite: false,
-        //     asNavFor: '.servicesSliderOne',
-        //     focusOnSelect: true,
-        //     centerMode: true,
-        //     responsive: [
-        //         {
+        //     adaptiveHeight: true,
+        //     infinite: false,
+        //     useTransform: true,
+        //     speed: 400,
+        //     cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        // });
+
+        // $('.servicesSliderTwo .swiper-wrapper')
+        //     .on('init', function (event, slick) {
+        //         $('.servicesSliderTwo .swiper-wrapper .slick-slide.slick-current').addClass('is-active');
+        //     })
+        //     .slick({
+        //         // slidesToShow: 7,
+        //         // slidesToScroll: 7,
+        //         variableWidth: true,
+        //         dots: false,
+        //         arrows: false,
+        //         focusOnSelect: false,
+        //         infinite: false,
+        //         responsive: [{
         //             breakpoint: 767,
         //             settings: {
-        //                 variableWidth: false,
         //                 slidesToShow: 1,
+        //                 slidesToScroll: 1,
         //             }
-        //         }
-        //     ]
-        // })
+        //         }]
+        //     });
 
-        var servicesSliderOne = new Splide('.servicesSliderOne', {
-            type: 'fade',
-            pagination: false,
-            arrows: false,
-            cover: true,
-        });
+        // $('.servicesSliderOne .swiper-wrapper').on('afterChange', function (event, slick, currentSlide) {
+        //     $('.servicesSliderTwo .swiper-wrapper').slick('slickGoTo', currentSlide);
+        //     var currrentNavSlideElem = '.servicesSliderTwo .swiper-wrapper .slick-slide[data-slick-index="' + currentSlide + '"]';
+        //     $('.servicesSliderTwo .swiper-wrapper .slick-slide.is-active').removeClass('is-active');
+        //     $(currrentNavSlideElem).addClass('is-active');
+        // });
 
-        var thumbnails = new Splide('.servicesSliderTwo', {
-            rewind: true,
-            autoWidth: true,
-            isNavigation: true,
-            gap: 10,
-            arrows: false,
-            // focus: 'center',
-            pagination: false,
-            cover: true,
-            dragMinThreshold: {
-                mouse: 4,
-                touch: 10,
-            }
-        });
+        // $('.servicesSliderTwo .swiper-wrapper').on('click', '.slick-slide', function (event) {
+        //     event.preventDefault();
+        //     var goToSingleSlide = $(this).data('slick-index');
 
-        servicesSliderOne.mount();
-        thumbnails.mount();
-        servicesSliderOne.sync(thumbnails);
+        //     $('.servicesSliderOne .swiper-wrapper').slick('slickGoTo', goToSingleSlide);
+        // });
+
 
         $(window).on('load resize', function () {
             var totalSlide = $('.slick-dots li').length;
