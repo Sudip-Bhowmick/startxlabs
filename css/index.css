@@ -13,12 +13,13 @@ body{
     display: flex;
 }
 
-#hero .container,
-#counters .container{
+#hero .container
+{
     max-width: calc(100vw - 2 * 5vw);
 }
 
-#cards .container{
+#cards .container,
+#counters .container{
     max-width: calc(100vw - 2 * 10.9375vw);
 }
 
