@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 :root{
@@ -508,12 +508,16 @@ ul.slick-dots li button::before{
     display: none;
 }
 
+.align-center{
+    align-items: center;
+}
+
 .form{
     width: 530px;
     max-width: 100%;
     border:none;
     border-radius: 46px;
-    padding: 60px 55px 37px;
+    padding: 40px;
     margin: auto;
     margin-right: 0;
     cursor: default;

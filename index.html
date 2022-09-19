@@ -36,11 +36,6 @@
                     <span class="overlay" id="overlay"></span>
                     <div class="menu" id="menu">
                         <ul class="menu-block">
-                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Services</a></li>
-                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Portfolio</a></li>
-                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">How we work</a></li>
-                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Technology</a></li>
-                            <li class="menu-item"><a class="menu-link" href="javascript:void(0)">Contact Us</a></li>
                             <li class="menu-item"><a class="menu-link btn-1" href="javascript:void(0)">Start A
                                     Project</a>
                             </li>
@@ -123,10 +118,10 @@
                                 <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
                                     required="">
                                 <input type="email" name="emailId" id="emailId" placeholder="Email ID *" required="">
-                                <textarea name="message" id="message" cols="30" rows="7"
+                                <textarea name="message" id="message" cols="30" rows="4"
                                     placeholder="Message..."></textarea>
 
-                                <input type="submit" value="Submit" class="btn-1 full-width mt_16">
+                                <input type="submit" value="Submit" class="btn-1 full-width">
                             </form>
                         </div>
                     </div>
@@ -134,11 +129,11 @@
             </div>
         </section>
 
-        <section id="counters" class="pt_120">
+        <section id="counters" class="pt_120 pb_60">
             <div class="container">
                 <div class="flex pb_60">
                     <div>
-                        <p class="justify medium">
+                        <p class="justify pt_30">
                             StartxLabs provide expert software design and development services so you can create
                             innovative world-class products. Our offshore development teams deliver the benefits of tech
                             expertise. We work hard to deliver 100% client satisfaction and get growth for our
@@ -154,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex three-equal-col pb_16">
+                <div class="flex three-equal-col pb_16 pt_30">
                     <div class="counter-box">
                         <div class="number">
                             <span>100</span><span>+</span>
@@ -177,7 +172,7 @@
             </div>
         </section>
 
-        <section id="reviews" class="pt_60">
+        <section id="reviews" class="pt_30 pb_60">
             <div class="container">
                 <div class="grid three-equal-col">
                     <div class="text-center">
@@ -795,6 +790,31 @@
                         <a href="javascript:void(0)" class="btn-2">View</a>
                     </div>
 
+                    <!-- view more -->
+
+                    <div class="card-item">
+                        <img src="img/card-04.jpg" alt="card-01">
+                        <h3 class="text_med pt_40 pb_16">Lorem ipsum dolor sit amet, </h3>
+                        <p class="pb_30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum massa congue ultricies
+                            quam pulvinar molestie.
+                        </p>
+                        <a href="javascript:void(0)" class="btn-2">View</a>
+                    </div>
+
+                    <div class="card-item">
+                        <img src="img/card-04.jpg" alt="card-01">
+                        <h3 class="text_med pt_40 pb_16">Lorem ipsum dolor sit amet, </h3>
+                        <p class="pb_30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum massa congue ultricies
+                            quam pulvinar molestie.
+                        </p>
+                        <a href="javascript:void(0)" class="btn-2">View</a>
+                    </div>
+
+                </div>
+                <div class="text-center pt_60">
+                    <a href="javascript:void(0)" class="btn-1" id="more-service">View More</a>
                 </div>
             </div>
         </section>
@@ -1177,6 +1197,7 @@
                 // focus: 'center',
                 pagination: false,
                 cover: true,
+                drag: 'free',
             }).mount();
 
             const servicesSliderOne = new Splide('.servicesSliderOne', {
@@ -1271,6 +1292,10 @@
             $('.slick-dots li').css('width', 'calc(100% / ' + totalSlide + ')')
         });
 
+        function firstSection() {
+            $("html, body").animate({ scrollTop: $('#counters').offset().top }, 1000);
+        }
+
         $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
                 $('header').addClass("white");
@@ -1280,6 +1305,25 @@
             }
         });
 
+    </script>
+    <script>
+        $(document).ready(function () {
+            var shown = 4;
+            $(".card-item").hide();
+            $(".card-item:lt(" + shown + ")").show();
+
+            var items = $(".card-item").length;
+            $("#more-service").click(function () {
+                shown = $(".card-item:visible").length + 2;
+                if (shown < items) {
+                    $(".card-item:lt(" + shown + ")").show();
+                } else {
+                    $(".card-item:lt(" + items + ")").show();
+                    $("#more-service").hide();
+                }
+                $("html, body").animate({ scrollTop: "+=150px" }, 800);
+            });
+        });
     </script>
 </body>
 
