@@ -1320,14 +1320,14 @@
             $("html, body").animate({ scrollTop: $('#counters').offset().top }, 1000);
         }
 
-        // $(window).scroll(function () {
-        //     if ($(this).scrollTop() > 50) {
-        //         $('header').addClass("white");
-        //     }
-        //     else {
-        //         $('header').removeClass("white");
-        //     }
-        // });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('header').addClass("white");
+            }
+            else {
+                $('header').removeClass("white");
+            }
+        });
 
     </script>
     <script>
