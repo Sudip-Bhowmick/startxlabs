@@ -29,6 +29,9 @@ body{
 .container-left {
     margin-left: calc((100% - calc(100vw - 2 * 10.9375vw)) / 2);
 }
+.container-right {
+    margin-right: calc((100% - calc(100vw - 2 * 10.9375vw)) / 2);
+  }
 
 #hero:hover .cursor{
     opacity: 1;
@@ -323,6 +326,9 @@ body{
 .testimonialSlider .image img{
     padding-left: 22px;
     width: 100px;
+}
+.servicesSliderOne .grid.two-equal-col p {
+    line-height: 2;
 }
 
 .form-flex{
