@@ -24,3 +24,16 @@ document.querySelectorAll(".menu-link").forEach(function (link) {
     bgOverlay.classList.remove("is-active");
   });
 });
+
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       $('header').addClass('scrollup');
+   } else {
+    $('header').removeClass('scrollup')
+    
+   }
+   lastScrollTop = st;
+});

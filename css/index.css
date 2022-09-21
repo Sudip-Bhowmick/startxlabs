@@ -19,10 +19,15 @@ body{
 }
 
 #cards .container,
-#counters .container{
+#counters .container,
+#web-technologies .container,
+#why .container{
     max-width: calc(100vw - 2 * 10.9375vw);
 }
 
+.container-left {
+    margin-left: calc((100% - calc(100vw - 2 * 10.9375vw)) / 2);
+}
 
 #hero:hover .cursor{
     opacity: 1;
