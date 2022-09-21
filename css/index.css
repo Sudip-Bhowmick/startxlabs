@@ -379,6 +379,13 @@ body{
     display: block;
 }
 
+@media(max-width: 1366px) and (min-width: 768px){
+    .circular-box{
+        width: 140px;
+        height: 140px;
+    }
+}
+
 @media(max-width: 767px){
     #hero p.grey.pt_40.medium {
         font-size: 120%;
