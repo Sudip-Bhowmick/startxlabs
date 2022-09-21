@@ -1,7 +1,29 @@
+@font-face {
+    font-family: Metropolis;
+    src: url(/fonts/Metropolis-Regular.otf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Metropolis;
+    src: url(/fonts/Metropolis-Medium.otf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: Metropolis;
+    src: url(/fonts/Metropolis-SemiBold.otf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: Metropolis;
+    src: url(/fonts/Metropolis-Bold.otf);
+    font-weight: 700;
+}
+
+
 *, html, body{
     box-sizing: border-box;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Metropolis', sans-serif;
     font-size: 18px;
 }
 
@@ -247,6 +269,7 @@ section{
 }
 .text_md{
     font-size: 38px;
+    line-height: 1.4;
 }
 .text_lg{
     font-size: 46px;
@@ -258,6 +281,7 @@ section{
 
 .text_xxl{
     font-size: 50px;
+    line-height: 1.4;
 }
 
 .text_xxxl{
@@ -273,9 +297,10 @@ section{
 .semi-bold{
     font-weight: 600;
 }
-.bold{
-    font-weight: bold;
+.bold, strong{
+    font-weight: 600;
 }
+
 
 .capitalize{
     text-transform: capitalize;
@@ -473,10 +498,10 @@ button.slick-arrow, button.slick-arrow:hover, button.slick-arrow:focus{
     background-image: url(../img/slick-arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    bottom: -0;
+    bottom: 25px;
     top: auto;
 }
 button.slick-arrow::before{
