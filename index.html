@@ -52,7 +52,7 @@
             <script>
                 function myFunc() {
                     var cursor = document.querySelector('.cursor');
-                    var links = document.querySelectorAll('a');
+                    // var links = document.querySelectorAll('a');
 
                     var xMousePos = 0;
                     var yMousePos = 0;
@@ -63,19 +63,19 @@
                         captureMousePosition(event);
                     })
 
-                    $(window).scroll(function (event) {
-                        if (lastScrolledLeft != $(document).scrollLeft()) {
-                            xMousePos -= lastScrolledLeft;
-                            lastScrolledLeft = $(document).scrollLeft();
-                            xMousePos += lastScrolledLeft;
-                        }
-                        if (lastScrolledTop != $(document).scrollTop()) {
-                            yMousePos -= lastScrolledTop;
-                            lastScrolledTop = $(document).scrollTop();
-                            yMousePos += lastScrolledTop;
-                        }
-                        window.status = "x = " + xMousePos + " y = " + yMousePos;
-                    });
+                    // $(window).scroll(function (event) {
+                    //     if (lastScrolledLeft != $(document).scrollLeft()) {
+                    //         xMousePos -= lastScrolledLeft;
+                    //         lastScrolledLeft = $(document).scrollLeft();
+                    //         xMousePos += lastScrolledLeft;
+                    //     }
+                    //     if (lastScrolledTop != $(document).scrollTop()) {
+                    //         yMousePos -= lastScrolledTop;
+                    //         lastScrolledTop = $(document).scrollTop();
+                    //         yMousePos += lastScrolledTop;
+                    //     }
+                    //     window.status = "x = " + xMousePos + " y = " + yMousePos;
+                    // });
                     function captureMousePosition(event) {
                         xMousePos = event.pageX;
                         yMousePos = event.pageY;
@@ -87,7 +87,7 @@
                     };
 
                     window.addEventListener('mousemove', editCursor);
-                    window.addEventListener('scroll', editCursor);
+                    // window.addEventListener('scroll', editCursor);
                 }; myFunc();
             </script>
 
@@ -188,7 +188,7 @@
             </div>
         </section>
 
-        <section class="pt_155">
+        <section id="services" class="pt_155">
             <div class="container-right">
 
 
@@ -749,7 +749,7 @@
                     <strong class="medium">together</strong> that matters
                 </h2>
                 <a href="javascript:void(0)" class="btn-1">Contact Us</a>
-                <div class="flex pt_60">
+                <div class="flex pt_60" id="case-studies">
                     <div class="card-item">
                         <img src="img/card-01.jpg" alt="card-01">
                         <h3 class="text_med pb_16">Lorem ipsum dolor sit amet, </h3>
@@ -869,7 +869,7 @@
                     </div>
                     <div>
                         <div class="circular-box">
-                            <img src="img/css.png" alt="css">
+                            <img src="img/css.png" alt="css" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center" class="img-fluid">CSS3</p>
                     </div>
@@ -899,7 +899,7 @@
                     </div>
                 </div>
 
-                <div class="text-center pt_60">
+                <div class="text-center pt_60 hom">
                     <a href="javascript:void(0)" class="btn-1">View More Technology</a>
                 </div>
             </div>
@@ -919,9 +919,11 @@
                         <div class="name">Jake Hansen</div>
                         <p>
                             We have been working with Startxlabs for nearly two years and have been happy working with
-                            the...
+                            the project managers and the product development teams on our mobile and desktop apps. They
+                            have been very responsive to our needs and have helped us produce a quality product that is
+                            pushing the bounds of innovation in VoIP and UCaaS communications.
                         </p>
-                        <div class="designation">Founder</div>
+                        <div class="designation">President, ZTelco</div>
                     </div>
                     <div>
                         <div class="image">
@@ -930,9 +932,10 @@
                         <div class="name">Brandon Raganx</div>
                         <p>
                             We would like to put a “Seal of Trust” on how the team did a professional job in developing
-                            TireJect...
+                            TireJect. Credit to their management for maintaining so much, yet never letting anyone feel
+                            unheard.
                         </p>
-                        <div class="designation">Founder</div>
+                        <div class="designation">CEO, TireJect</div>
                     </div>
                     <div>
                         <div class="image">
@@ -940,11 +943,11 @@
                         </div>
                         <div class="name">Tavo Zambrano</div>
                         <p>
-                            With the team’s professionalism, prompt response, and courteous service, we <a
-                                href="javascript:void(0)">read
-                                more...</a>
+                            With the team’s professionalism, prompt response, and courteous service, we created SkydropX
+                            which is breaking new ground in the logistics industry. Their flexibility, dedication, and
+                            constant support are commendable.
                         </p>
-                        <div class="designation">Founder</div>
+                        <div class="designation">CEO & Co-Founder, SkydropX</div>
                     </div>
                     <div>
                         <div class="image">
@@ -953,9 +956,10 @@
                         <div class="name">Ashok Pundit</div>
                         <p>
                             Right from the “Idea” of Amar Ujala, and till it was a “Reality”, they have been developing
-                            our...
+                            our suggestions into features with professionalism. The post-launch support we got shows how
+                            much they value “Client Satisfaction”.
                         </p>
-                        <div class="designation">Founder</div>
+                        <div class="designation">CTO, Amarujala.com</div>
                     </div>
                 </div>
             </div>
@@ -973,7 +977,7 @@
                                 experience</strong>
                         </h2>
                         <div class="pt_60">
-                            <a href="javascript:void(0)" class="btn-1">Let’s Talk</a>
+                            <a href="javascript:void(0)" class="btn-1" onclick="focusForm2()">Let’s Talk</a>
                         </div>
                     </div>
                 </div>
@@ -985,7 +989,7 @@
                         <p class="text_xs pt_30 white">We are always available to collaborate in our clients time zone
                         </p>
                         <div class="pt_60">
-                            <a href="javascript:void(0)" class="btn-1">Let's Connect! </a>
+                            <a href="javascript:void(0)" class="btn-1" onclick="focusForm2()">Let's Connect! </a>
                         </div>
                         <div class="contact-details pt_60">
                             <div class="icon-box white">
@@ -1020,7 +1024,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="form dark">
+                        <div class="form dark" id="form2">
                             <form>
                                 <input type="text" name="name" id="name" placeholder="Name *" required>
                                 <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
@@ -1057,19 +1061,13 @@
                         <div class="quick-links mt_16">
                             <ul>
                                 <li>
-                                    <a href="javascript:void(0)">Case Studies</a>
+                                    <a href="#case-studies">Case Studies</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">About Us</a>
+                                    <a href="#counters">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">Our Services</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Technologies</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Clients</a>
+                                    <a href="#services">Our Services</a>
                                 </li>
                             </ul>
                         </div>
@@ -1077,20 +1075,14 @@
                     </div>
 
                     <div>
-                        <h3 class="bold text_xxs">Resources</h3>
+                        <h3 class="bold text_xxs" style="visibility: hidden">Resources</h3>
                         <div class="quick-links mt_16">
                             <ul>
                                 <li>
-                                    <a href="javascript:void(0)">Blogs</a>
+                                    <a href="#web-technologies">Technologies</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0)">Careers</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)">Terms and Conditions</a>
+                                    <a href="#why">Clients</a>
                                 </li>
                             </ul>
                         </div>
@@ -1187,6 +1179,38 @@
                 }
             });
         }
+
+        mobileOnlySlider2("#web-technologies .flex", true, false, 767);
+
+        function mobileOnlySlider2($slidername, $dots, $arrows, $breakpoint) {
+            var slider = $($slidername);
+            var settings = {
+                mobileFirst: true,
+                autoplay: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: $breakpoint,
+                        settings: "unslick"
+                    }
+                ]
+            };
+
+            slider.slick(settings);
+
+            $(window).on("resize", function () {
+                if ($(window).width() > $breakpoint) {
+                    return;
+                }
+                if (!slider.hasClass("slick-initialized")) {
+                    return slider.slick(settings);
+                }
+            });
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             const thumbnails = new Splide('.servicesSliderTwo', {
                 rewind: true,
@@ -1324,6 +1348,13 @@
                 $("html, body").animate({ scrollTop: "+=150px" }, 800);
             });
         });
+
+        function focusForm2() {
+            $('html, body').animate({
+                scrollTop: $("#form2").offset().top
+            }, 500);
+            $(".form.dark [name='name']").focus();
+        }
     </script>
 </body>
 

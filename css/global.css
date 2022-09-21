@@ -26,6 +26,7 @@
     font-family: 'Metropolis', sans-serif;
     font-size: 18px;
     line-height: 1.4;
+    /* scroll-behavior: smooth; */
 }
 
 :root{
@@ -447,7 +448,7 @@ h2 span, h2 strong{
 
 :root {
     --container_width: 100%;
-    --container_padding: 15px;
+    --container_padding: 30px;
     --container_left_space: calc((100% - var(--container_width)) / 2);
   }
   @media (min-width: 768px) and (max-width: 991px) {
@@ -623,6 +624,16 @@ input[type="button"]{
     max-width: 100%;
 }
 
+@media(max-width: 1300px){
+    .contact-details{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .contact-details.pt_40{
+        padding-top: 10px;
+    }
+}
+
 @media(max-width:1199px){
     ul.slick-dots {
         max-width: calc(100% - 400px)
@@ -640,6 +651,12 @@ input[type="button"]{
 @media(max-width: 767px){
     *, html, body{
         font-size: 14px;
+    }
+    .hom{
+        display: none;
+    }
+    button.slick-arrow{
+        display: none;
     }
     ul.slick-dots {
         max-width: 100%;
@@ -663,6 +680,9 @@ input[type="button"]{
     }
     .pt_40 {
         padding-top: 20px;
+    }
+    .pt_60 {
+        padding-top: 40px;
     }
     .pt_155 {
         padding-top: 100px;
@@ -707,12 +727,9 @@ input[type="button"]{
     .contact-details {
         flex-direction: column;
     }
-    .contact-details{
-        gap: 24px;
-    }
     .footer-flex{
         display: grid;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .quick-links li{
         margin-bottom: 14px;
