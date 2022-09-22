@@ -536,7 +536,8 @@ button.slick-next{
 }
 ul.slick-dots {
     bottom: 55px;
-    max-width: 880px;
+    /* max-width: 880px; */
+    max-width: calc(90% - 262px);
     text-align: left;
 }
 ul.slick-dots li{
