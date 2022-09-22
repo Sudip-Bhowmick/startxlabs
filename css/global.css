@@ -56,6 +56,19 @@ section{
     z-index: 1;
     position: relative;
 }
+
+/* scroll animation */
+[data-scroll], [data-scroll="out"]{
+    transition: 0.3s ease;
+    transition-delay: 1s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+[data-scroll="in"]{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* start header */
 .header {
     /* position: -webkit-sticky; */
