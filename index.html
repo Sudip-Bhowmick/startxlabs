@@ -1244,10 +1244,11 @@
             }).mount();
 
             const servicesSliderOne = new Splide('.servicesSliderOne', {
-                type: 'slide',
+                type: 'fade',
                 pagination: false,
                 arrows: false,
                 cover: true,
+                perPage: 1,
             });
 
             servicesSliderOne.sync(thumbnails).mount();

@@ -184,18 +184,21 @@ body{
     cursor: pointer;
     transition: .3s;
     overflow: hidden;
+    position: relative;
 }
 .service-box .traced{
     opacity: 0;
     transition: .3s;
     position: absolute;
     right: 0px;
-    top: 20px;
+    top: 0px;
     margin: 0;
     rotate: 90deg;
     scale: 2;
     transform-origin: top right;
+    z-index: 1;
 }
+
 .swiper-slide-active .service-box img:not(.traced),
 .splide__slide.is-active .service-box img:not(.traced){
     opacity: 0;
