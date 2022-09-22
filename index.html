@@ -835,74 +835,111 @@
                 <h2 class="bold text_xl pb_16">Web and Mobile App Technologies </h2>
                 <p class="medium capitalize">We gained expertise over the years</p>
 
-                <div class="flex pt_60">
-                    <div>
+                <div class="flex pt_60 tech-row">
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/python.png" alt="python" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Python</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/postgre.png" alt="PostgreSQL" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">PostgreSQL</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/node.png" alt="node" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Node Js</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/mysql.png" alt="mysql" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">My SQL</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/mongodb.png" alt="mongodb" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">MongoDB</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/html.png" alt="html" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">HTML5</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/django.png" alt="django" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Django</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/css.png" alt="css" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center" class="img-fluid">CSS3</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/react.png" alt="react" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">React Js</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/vue.png" alt="vue" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Vue Js</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/shopify.png" alt="shopify" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Shopify</p>
                     </div>
-                    <div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                    </div>
+
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                    </div>
+                    <div class="tech-box">
                         <div class="circular-box">
                             <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
                         </div>
@@ -911,7 +948,7 @@
                 </div>
 
                 <div class="text-center pt_60 hom">
-                    <a href="javascript:void(0)" class="btn-1">View More Technology</a>
+                    <a href="javascript:void(0)" class="btn-1" id="more-tech">View More Technology</a>
                 </div>
             </div>
         </section>
@@ -1352,18 +1389,18 @@
     </script>
     <script>
         $(document).ready(function () {
-            var shown = 4;
-            $(".card-item").hide();
-            $(".card-item:lt(" + shown + ")").show();
+            var shown = 12;
+            $(".tech-box").hide();
+            $(".tech-box:lt(" + shown + ")").show();
 
-            var items = $(".card-item").length;
-            $("#more-service").click(function () {
-                shown = $(".card-item:visible").length + 2;
+            var items = $(".tech-box").length;
+            $("#more-tech").click(function () {
+                shown = $(".tech-box:visible").length + 6;
                 if (shown < items) {
-                    $(".card-item:lt(" + shown + ")").show();
+                    $(".tech-box:lt(" + shown + ")").show();
                 } else {
-                    $(".card-item:lt(" + items + ")").show();
-                    $("#more-service").hide();
+                    $(".tech-box:lt(" + items + ")").show();
+                    $("#more-tech").hide();
                 }
                 $("html, body").animate({ scrollTop: "+=150px" }, 800);
             });

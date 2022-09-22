@@ -298,7 +298,7 @@ body{
     transition: .3s;
     height: fit-content;
     padding-bottom: 30px;
-    display: none;
+    /* display: none; */
     width: 27vw;
     min-height: 54.1666666667vw;
 }
