@@ -171,6 +171,8 @@ body{
     top: 20px;
     margin: 0;
     rotate: 90deg;
+    scale: 2;
+    transform-origin: top right;
 }
 .swiper-slide-active .service-box img:not(.traced),
 .splide__slide.is-active .service-box img:not(.traced){
