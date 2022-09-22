@@ -36,7 +36,8 @@
                     <span class="overlay" id="overlay"></span>
                     <div class="menu" id="menu">
                         <ul class="menu-block">
-                            <li class="menu-item"><a class="menu-link btn-1" href="javascript:void(0)">Start A
+                            <li class="menu-item"><a onclick="focusForm2()" class="menu-link btn-1"
+                                    href="javascript:void(0)">Start A
                                     Project</a>
                             </li>
                         </ul>
@@ -112,7 +113,7 @@
                         </p>
                     </div>
                     <div>
-                        <div class="form">
+                        <div class="form" id="form">
                             <form>
                                 <input type="text" name="name" id="name" placeholder="Name *" required="">
                                 <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
@@ -758,7 +759,7 @@
                     Let's <strong class="medium">build</strong> something<br>
                     <strong class="medium">together</strong> that matters
                 </h2>
-                <a href="javascript:void(0)" class="btn-1">Contact Us</a>
+                <a href="javascript:void(0)" class="btn-1" onclick="focusForm2()">Contact Us</a>
                 <div class="flex pt_60" id="case-studies">
                     <div class="card-item" data-scroll>
                         <img src="img/card-01.jpg" alt="card-01">
@@ -829,7 +830,7 @@
             </div>
         </section>
 
-        <section id="web-technologies" class="pt_88 pb_60">
+        <section id="web-technologies" class="pt_88 pb_60" data-scroll>
             <div class="container">
                 <h2 class="bold text_xl pb_16">Web and Mobile App Technologies </h2>
                 <p class="medium capitalize">We gained expertise over the years</p>
@@ -1371,6 +1372,13 @@
                 scrollTop: $("#form2").offset().top
             }, 500);
             $(".form.dark [name='name']").focus();
+        }
+
+        function focusForm() {
+            $('html, body').animate({
+                scrollTop: $("#form").offset().top
+            }, 500);
+            $(".form:not(.dark) [name='name']").focus();
         }
     </script>
 </body>
