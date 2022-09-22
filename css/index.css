@@ -12,7 +12,12 @@ body{
     min-height: 100vh;
     display: flex;
 }
-
+#services {
+    overflow: hidden;
+}
+.servicesSliderTwo .splide__track{
+    overflow: visible;
+}
 @media(min-width: 1024px){
     #hero .container
     {
