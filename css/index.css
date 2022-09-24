@@ -39,7 +39,7 @@ section:not(.hero){
 
 @media screen and (max-width: 1366px){
     #case-studies{
-        padding-top: 50px;
+        padding-top: 80px;
     }
     
 }
@@ -82,7 +82,7 @@ section:not(.hero){
 #hero .grid .flex{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 #hero .blur, #hero .blur2{
     position: fixed;
@@ -182,7 +182,9 @@ footer{
 #counters .flex:not(.three-equal-col) > div:last-child{
     width: 40%;
 }
-
+#counters .justify{
+    font-size: 21px;
+}
 .flex.three-equal-col {
     display: flex;
     /* justify-content: space-between; */
@@ -206,6 +208,7 @@ footer{
     color: var(--blue);
     font-weight: 600;
     line-height: 1;
+    text-align: center;
 }
 .counter-box .number span{
     font-size: inherit;
