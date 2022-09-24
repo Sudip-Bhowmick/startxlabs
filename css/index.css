@@ -5,6 +5,19 @@ h1{
 body{
     background-color: #F8F8F8;
 }
+
+/* #hero .grid.two-equal-col{
+    position: fixed;
+    width: 100%;
+    left: 0;
+}
+section:not(.hero){
+    z-index: 1;
+} */
+
+.h-auto{
+    height: auto !important
+}
 #hero{
     background-color: #F8F8F8;
     overflow: hidden;

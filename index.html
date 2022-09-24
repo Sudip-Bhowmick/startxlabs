@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.min.js"></script>
 </head>
@@ -46,134 +46,140 @@
             </div>
         </header>
 
-        <section id="hero" class="pt_80 pb_155">
+        <div id="fullPage">
+            <section id="hero" class="pt_80 pb_155 vertical-scrolling h-auto">
 
-            <div class="cursor"></div>
+                <div class="cursor"></div>
 
-            <script>
-                function myFunc() {
-                    var cursor = document.querySelector('.cursor');
-                    // var links = document.querySelectorAll('a');
+                <script>
+                    function myFunc() {
+                        var cursor = document.querySelector('.cursor');
+                        // var links = document.querySelectorAll('a');
 
-                    var xMousePos = 0;
-                    var yMousePos = 0;
-                    var lastScrolledLeft = 0;
-                    var lastScrolledTop = 0;
+                        var xMousePos = 0;
+                        var yMousePos = 0;
+                        var lastScrolledLeft = 0;
+                        var lastScrolledTop = 0;
 
-                    $(document).mousemove(function (event) {
-                        captureMousePosition(event);
-                    })
+                        $(document).mousemove(function (event) {
+                            captureMousePosition(event);
+                        })
 
-                    // $(window).scroll(function (event) {
-                    //     if (lastScrolledLeft != $(document).scrollLeft()) {
-                    //         xMousePos -= lastScrolledLeft;
-                    //         lastScrolledLeft = $(document).scrollLeft();
-                    //         xMousePos += lastScrolledLeft;
-                    //     }
-                    //     if (lastScrolledTop != $(document).scrollTop()) {
-                    //         yMousePos -= lastScrolledTop;
-                    //         lastScrolledTop = $(document).scrollTop();
-                    //         yMousePos += lastScrolledTop;
-                    //     }
-                    //     window.status = "x = " + xMousePos + " y = " + yMousePos;
-                    // });
-                    function captureMousePosition(event) {
-                        xMousePos = event.pageX;
-                        yMousePos = event.pageY;
-                    }
+                        // $(window).scroll(function (event) {
+                        //     if (lastScrolledLeft != $(document).scrollLeft()) {
+                        //         xMousePos -= lastScrolledLeft;
+                        //         lastScrolledLeft = $(document).scrollLeft();
+                        //         xMousePos += lastScrolledLeft;
+                        //     }
+                        //     if (lastScrolledTop != $(document).scrollTop()) {
+                        //         yMousePos -= lastScrolledTop;
+                        //         lastScrolledTop = $(document).scrollTop();
+                        //         yMousePos += lastScrolledTop;
+                        //     }
+                        //     window.status = "x = " + xMousePos + " y = " + yMousePos;
+                        // });
+                        function captureMousePosition(event) {
+                            xMousePos = event.pageX;
+                            yMousePos = event.pageY;
+                        }
 
-                    var editCursor = function editCursor(event) {
-                        cursor.style.left = xMousePos + 'px';
-                        cursor.style.top = yMousePos + 'px';
-                    };
+                        var editCursor = function editCursor(event) {
+                            cursor.style.left = xMousePos + 'px';
+                            cursor.style.top = yMousePos + 'px';
+                        };
 
-                    window.addEventListener('mousemove', editCursor);
-                    // window.addEventListener('scroll', editCursor);
-                }; myFunc();
-            </script>
+                        window.addEventListener('mousemove', editCursor);
+                        // window.addEventListener('scroll', editCursor);
+                    }; myFunc();
+                </script>
 
 
-            <div class="blur">
-                <img src="img/blur.png" class="img-responsive">
-            </div>
-            <div class="blur2">
-                <img src="img/blur-2.png" class="img-responsive">
-            </div>
-            <div class="container">
-                <div class="grid two-equal-col">
-                    <div class="pt_40">
-                        <h1 class="text_lg regular">
-                            We <strong>Design, Develop</strong> and
-                            <strong>Market</strong> state-of-the-art
-                            digital solutions for you
-                        </h1>
-                        <p class="grey pt_40 medium">
-                            Design, Web & App Development executed with
-                            <span class="blue bold">Strategy, Experience and Expertise</span>
-                        </p>
-                    </div>
-                    <div>
-                        <div class="form" id="form">
-                            <form>
-                                <input type="text" name="name" id="name" placeholder="Name *" required="">
-                                <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
-                                    required="">
-                                <input type="email" name="emailId" id="emailId" placeholder="Email ID *" required="">
-                                <textarea name="message" id="message" cols="30" rows="4"
-                                    placeholder="Message..."></textarea>
-
-                                <input type="submit" value="Submit" class="btn-1 full-width">
-                            </form>
-                        </div>
-                    </div>
+                <div class="blur">
+                    <img src="img/blur.png" class="img-responsive">
                 </div>
-            </div>
-        </section>
+                <div class="blur2">
+                    <img src="img/blur-2.png" class="img-responsive">
+                </div>
+                <div class="container">
+                    <div class="grid two-equal-col">
+                        <div class="pt_40">
+                            <h1 class="text_lg regular">
+                                We <strong>Design, Develop</strong> and
+                                <strong>Market</strong> state-of-the-art
+                                digital solutions for you
+                            </h1>
+                            <p class="grey pt_40 medium">
+                                Design, Web & App Development executed with
+                                <span class="blue bold">Strategy, Experience and Expertise</span>
+                            </p>
+                        </div>
+                        <div>
+                            <div class="form" id="form">
+                                <form>
+                                    <input type="text" name="name" id="name" placeholder="Name *" required="">
+                                    <input type="tel" name="mobileNumber" id="mobileNumber"
+                                        placeholder="Mobile Number *" required="">
+                                    <input type="email" name="emailId" id="emailId" placeholder="Email ID *"
+                                        required="">
+                                    <textarea name="message" id="message" cols="30" rows="4"
+                                        placeholder="Message..."></textarea>
 
-        <section id="counters" class="pt_120 pb_60">
-            <div class="container">
-                <div class="flex pb_60">
-                    <div>
-                        <p class="justify pt_30">
-                            StartxLabs provide expert software design and development services so you can create
-                            innovative world-class products. Our offshore development teams deliver the benefits of tech
-                            expertise. We work hard to deliver 100% client satisfaction and get growth for our
-                            customer's business.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="counter-box special">
-                            <div class="number">
-                                <span>110</span><span>+</span>
+                                    <input type="submit" value="Submit" class="btn-1 full-width">
+                                </form>
                             </div>
-                            <p>Happy Clients</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex three-equal-col pb_16 pt_30">
-                    <div class="counter-box">
-                        <div class="number">
-                            <span>100</span><span>+</span>
-                        </div>
-                        <p>Engineers and consultants</p>
-                    </div>
-                    <div class="counter-box">
-                        <div class="number">
-                            <span>08</span><span>+</span>
-                        </div>
-                        <p>years of Experience</p>
-                    </div>
-                    <div class="counter-box">
-                        <div class="number">
-                            <span>50</span><span>+</span>
-                        </div>
-                        <p>Global Brands and Enterprises Served</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="reviews" class="pt_30 pb_60">
+
+            <section id="counters" class="pt_120 pb_60 vertical-scrolling h-auto">
+                <div class="container">
+                    <div class="flex pb_60">
+                        <div>
+                            <p class="justify pt_30 medium">
+                                StartxLabs provide expert software design and development services so you can create
+                                innovative world-class products. Our offshore development teams deliver the benefits of
+                                tech
+                                expertise. We work hard to deliver 100% client satisfaction and get growth for our
+                                customer's business.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="counter-box special">
+                                <div class="number">
+                                    <span>110</span><span>+</span>
+                                </div>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex three-equal-col pb_16 pt_30">
+                        <div class="counter-box">
+                            <div class="number">
+                                <span>100</span><span>+</span>
+                            </div>
+                            <p>Engineers and consultants</p>
+                        </div>
+                        <div class="counter-box">
+                            <div class="number">
+                                <span>08</span><span>+</span>
+                            </div>
+                            <p>years of Experience</p>
+                        </div>
+                        <div class="counter-box">
+                            <div class="number">
+                                <span>50</span><span>+</span>
+                            </div>
+                            <p>Global Brands and Enterprises Served</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <section id="reviews" class="pt_30 pb_60 h-auto">
             <div class="container">
                 <div class="grid three-equal-col">
                     <div class="text-center">
@@ -189,7 +195,7 @@
             </div>
         </section>
 
-        <section id="services" class="pt_155">
+        <section id="services" class="pt_155 h-auto">
             <div class="container-right">
 
 
@@ -557,7 +563,7 @@
             </div>
         </section>
 
-        <section id="cards" class="pt_120 pb_60">
+        <section id="cards" class="pt_120 pb_60 h-auto">
             <div class="container">
                 <h2 class="blue regular text_xl pb_40">
                     Let's <strong class="medium">build</strong> something<br>
@@ -634,7 +640,7 @@
             </div>
         </section>
 
-        <section id="web-technologies" class="pt_88 pb_60" data-scroll>
+        <section id="web-technologies" class="pt_88 pb_60 h-auto">
             <div class="container">
                 <h2 class="bold text_xl pb_16">Web and Mobile App Technologies </h2>
                 <p class="medium capitalize">We gained expertise over the years</p>
@@ -757,7 +763,7 @@
             </div>
         </section>
 
-        <section id="why" class="pt_88 pb_88">
+        <section id="why" class="pt_88 pb_88 h-auto">
             <div class="container-left">
                 <h2 class="text_xxl medium mob-text-center" style="line-height:1.2">Why <br>
                     us.
@@ -770,9 +776,12 @@
                         </div>
                         <div class="name">Jake Hansen</div>
                         <p>
-                            We have been working with Startxlabs for nearly two years and have been happy working with
-                            the project managers and the product development teams on our mobile and desktop apps. They
-                            have been very responsive to our needs and have helped us produce a quality product that is
+                            We have been working with Startxlabs for nearly two years and have been happy working
+                            with
+                            the project managers and the product development teams on our mobile and desktop apps.
+                            They
+                            have been very responsive to our needs and have helped us produce a quality product that
+                            is
                             pushing the bounds of innovation in VoIP and UCaaS communications.
                         </p>
                         <div class="designation">President, ZTelco</div>
@@ -783,8 +792,10 @@
                         </div>
                         <div class="name">Brandon Raganx</div>
                         <p>
-                            We would like to put a “Seal of Trust” on how the team did a professional job in developing
-                            TireJect. Credit to their management for maintaining so much, yet never letting anyone feel
+                            We would like to put a “Seal of Trust” on how the team did a professional job in
+                            developing
+                            TireJect. Credit to their management for maintaining so much, yet never letting anyone
+                            feel
                             unheard.
                         </p>
                         <div class="designation">CEO, TireJect</div>
@@ -795,8 +806,10 @@
                         </div>
                         <div class="name">Tavo Zambrano</div>
                         <p>
-                            With the team’s professionalism, prompt response, and courteous service, we created SkydropX
-                            which is breaking new ground in the logistics industry. Their flexibility, dedication, and
+                            With the team’s professionalism, prompt response, and courteous service, we created
+                            SkydropX
+                            which is breaking new ground in the logistics industry. Their flexibility, dedication,
+                            and
                             constant support are commendable.
                         </p>
                         <div class="designation">CEO & Co-Founder, SkydropX</div>
@@ -807,8 +820,10 @@
                         </div>
                         <div class="name">Ashok Pundit</div>
                         <p>
-                            Right from the “Idea” of Amar Ujala, and till it was a “Reality”, they have been developing
-                            our suggestions into features with professionalism. The post-launch support we got shows how
+                            Right from the “Idea” of Amar Ujala, and till it was a “Reality”, they have been
+                            developing
+                            our suggestions into features with professionalism. The post-launch support we got shows
+                            how
                             much they value “Client Satisfaction”.
                         </p>
                         <div class="designation">CTO, Amarujala.com</div>
@@ -817,7 +832,7 @@
             </div>
         </section>
 
-        <section id="contact" class="black_bg pt_120 pb_120">
+        <section id="contact" class="black_bg pt_120 pb_120 h-auto">
             <div class="container">
                 <div class="grid two-equal-col align-center">
                     <div>
@@ -838,7 +853,8 @@
                         <h3 class="bold text_md white">
                             Looking for a custom website or mobile app development partner?
                         </h3>
-                        <p class="text_xs pt_30 white">We are always available to collaborate in our clients time zone
+                        <p class="text_xs pt_30 white">We are always available to collaborate in our clients time
+                            zone
                         </p>
                         <div class="pt_60">
                             <a href="javascript:void(0)" class="btn-1" onclick="focusForm2()">Let's Connect! </a>
@@ -978,19 +994,33 @@
                 </div>
             </div>
         </footer>
+
     </main>
 
     <script src="js/header.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+
     <script>
         ScrollOut({
             threshold: 0.1,
             once: true,
         });
     </script>
+    <!-- <script>
+        $('#fullPage').fullpage({
+            sectionSelector: '.vertical-scrolling',
+            // navigation: true,
+            // autoScrolling: false,
+            fitToSection: false,
+            keyboardScrolling: true,
+            easingcss3: "ease-in-out",
+            verticalCentered: true,
+            scrollBar: true
+        });
+    </script> -->
     <script>
         $('.testimonialSlider').slick({
             variableWidth: true,
@@ -1096,82 +1126,6 @@
 
         });
 
-        // var mySwiperOne = new Swiper('.servicesSliderOne .swiper-container', {
-        //     speed: 400,
-        //     effect: 'fade',
-        //     spaceBetween: 100,
-        //     initialSlide: 0,
-        //     //truewrapper adoptsheight of active slide
-        //     autoHeight: false,
-        //     // Optional parameters
-        //     direction: 'horizontal',
-        //     slidesPerView: 1,
-        // });
-
-        // var mySwiperTwo = new Swiper('.servicesSliderTwo .swiper-container', {
-        //     slidesPerView: "auto",
-        //     speed: 400,
-        //     effect: 'slide',
-        //     spaceBetween: 20,
-        //     direction: 'horizontal',
-        //     grabCursor: true,
-        //     slideToClickedSlide: true,
-        //     centeredSlides: false,
-        //     freeMode: true,
-        // });
-
-        // mySwiperOne.controller.control = mySwiperTwo;
-        // mySwiperTwo.controller.control = mySwiperOne;
-
-
-        // $('.servicesSliderOne .swiper-wrapper').slick({
-        //     slidesToShow: 1,
-        //     slidesToScroll: 1,
-        //     arrows: false,
-        //     fade: true,
-        //     adaptiveHeight: true,
-        //     infinite: false,
-        //     useTransform: true,
-        //     speed: 400,
-        //     cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
-        // });
-
-        // $('.servicesSliderTwo .swiper-wrapper')
-        //     .on('init', function (event, slick) {
-        //         $('.servicesSliderTwo .swiper-wrapper .slick-slide.slick-current').addClass('is-active');
-        //     })
-        //     .slick({
-        //         // slidesToShow: 7,
-        //         // slidesToScroll: 7,
-        //         variableWidth: true,
-        //         dots: false,
-        //         arrows: false,
-        //         focusOnSelect: false,
-        //         infinite: false,
-        //         responsive: [{
-        //             breakpoint: 767,
-        //             settings: {
-        //                 slidesToShow: 1,
-        //                 slidesToScroll: 1,
-        //             }
-        //         }]
-        //     });
-
-        // $('.servicesSliderOne .swiper-wrapper').on('afterChange', function (event, slick, currentSlide) {
-        //     $('.servicesSliderTwo .swiper-wrapper').slick('slickGoTo', currentSlide);
-        //     var currrentNavSlideElem = '.servicesSliderTwo .swiper-wrapper .slick-slide[data-slick-index="' + currentSlide + '"]';
-        //     $('.servicesSliderTwo .swiper-wrapper .slick-slide.is-active').removeClass('is-active');
-        //     $(currrentNavSlideElem).addClass('is-active');
-        // });
-
-        // $('.servicesSliderTwo .swiper-wrapper').on('click', '.slick-slide', function (event) {
-        //     event.preventDefault();
-        //     var goToSingleSlide = $(this).data('slick-index');
-
-        //     $('.servicesSliderOne .swiper-wrapper').slick('slickGoTo', goToSingleSlide);
-        // });
-
-
         $(window).on('load resize', function () {
             var totalSlide = $('.slick-dots li').length;
             $('.slick-dots li').css('width', 'calc(100% / ' + totalSlide + ')')
@@ -1215,6 +1169,12 @@
                 scrollTop: $("#form2").offset().top
             }, 500);
             $(".form.dark [name='name']").focus();
+            setTimeout(() => {
+                $('.form.dark').addClass('onview')
+            }, 500);
+            setTimeout(() => {
+                $('.form.dark').removeClass('onview')
+            }, 2000);
         }
 
         function focusForm() {
@@ -1222,6 +1182,12 @@
                 scrollTop: $("#form").offset().top
             }, 500);
             $(".form:not(.dark) [name='name']").focus();
+            setTimeout(() => {
+                $('.form:not(.dark)').addClass('onview')
+            }, 500);
+            setTimeout(() => {
+                $('.form:not(.dark)').removeClass('onview')
+            }, 2000);
         }
     </script>
 </body>
