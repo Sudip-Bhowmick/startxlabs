@@ -187,8 +187,8 @@ footer{
 }
 .flex.three-equal-col {
     display: flex;
-    /* justify-content: space-between; */
-    justify-content: space-evenly;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
 }
 .counter-box{
     padding: 20px;
@@ -204,7 +204,7 @@ footer{
 }
 
 .counter-box .number{
-    font-size: 82px;
+    font-size: 60px;
     color: var(--blue);
     font-weight: 600;
     line-height: 1;
@@ -224,7 +224,7 @@ footer{
     border-radius: 25px;
 }
 .counter-box.special .number{
-    font-size: 120px;
+    font-size: 80px;
 }
 .counter-box.special p{
     font-size: 24px;
