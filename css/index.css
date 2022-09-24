@@ -43,6 +43,14 @@ section:not(.hero){
     }
     
 }
+
+/* @media(min-width: 1600px){
+    #hero .container{
+        max-width: calc(100vw - 2 * 10.9375vw);
+        width: 100%;
+    }
+} */
+
 @media(min-width: 1024px){
     #hero .container
     {
@@ -76,10 +84,22 @@ section:not(.hero){
     flex-direction: column;
     justify-content: space-evenly;
 }
-#hero .container{
+#hero .blur, #hero .blur2{
     position: fixed;
-    right: 0;
-    left: 0;
+}
+
+@media(min-width: 768px){
+    #hero .container{
+        position: fixed;
+        right: 0;
+        left: 0;
+    
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-top: 0;
+        margin-top: -50px;
+    }
 }
 
 footer{
@@ -174,8 +194,11 @@ footer{
     cursor: default;
     transition: 0.3s ease;
 }
-.counter-box:hover, .counter-box.active{
-    box-shadow: -6px 6px 15px 0px #00000014;
+
+@media(min-width: 768px){
+    .counter-box:hover, .counter-box.active{
+        box-shadow: -6px 6px 15px 0px #00000014;
+    }
 }
 
 .counter-box .number{
@@ -319,10 +342,17 @@ footer{
 
 .servicesSliderOne .splide__slide{
     display: none;
-    transition: 0.3s ease;
+    /* transition: 0.3s ease; */
+    opacity: 0;
 }
 .servicesSliderOne .splide__slide.is-visible{
     display: block;
+    animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 #cards .flex{
@@ -475,6 +505,9 @@ footer{
     .blur2{
         left: 0;
     }
+    #counters .justify{
+        font-size: 18px;
+    }
     .servicesSliderOne .grid.two-equal-col{
         display: flex;
         flex-direction: column-reverse;
@@ -484,10 +517,14 @@ footer{
     .servicesSliderOne .grid.two-equal-col > div:nth-child(2){
         margin-inline: 30px;
     }
+    .text_xl {
+        font-size: 38px;
+    }
     #web-technologies .flex{
         /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
         display: flex;
         flex-wrap: nowrap;
+        padding-bottom: 60px !important;
     }
     section#web-technologies {
         padding-bottom: 10px;
@@ -538,6 +575,9 @@ footer{
     }
     #web-technologies .flex{
         justify-content: center;
+    }
+    .testimonialSlider .slick-arrow{
+        display: none !important;
     }
     .testimonialSlider {
         text-align: center;
@@ -591,7 +631,7 @@ footer{
         font-size: 12px;
     }
     .counter-box {
-        padding: 15px;
+        padding: 12px;
     }
     /* #cards .flex{
         gap: 100px;
