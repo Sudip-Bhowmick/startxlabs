@@ -140,6 +140,9 @@ section{
       opacity: 0;
       visibility: hidden;
     }
+    .header a.brand img{
+        height: 50px;
+    }
   }
   @media (max-width: 1199px) {
     .header .navbar .burger {
