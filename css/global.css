@@ -315,7 +315,7 @@ section{
     font-weight: 600;
 }
 .bold, strong{
-    font-weight: 600;
+    font-weight: 700;
 }
 
 
@@ -360,7 +360,7 @@ section{
     padding-bottom: 88px;
 }
 .pt_120{
-    padding-top: 120px;
+    padding-top: 80px;
 }
 .pb_120{
     padding-bottom: 120px;
