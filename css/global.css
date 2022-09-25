@@ -661,6 +661,10 @@ input[type="button"]{
     display: flex;
     gap: 15px;
 }
+.social-links a {
+    display: flex;
+    align-items: center;
+}
 .quick-links ul{
     padding-left: 0;
     list-style: none;
@@ -713,6 +717,9 @@ input[type="button"]{
 .mob-only{
     display: none;
 }
+.desk-only{
+    display: block !important;
+}
 
 @media(max-width: 767px){
     *, html, body{
@@ -720,6 +727,9 @@ input[type="button"]{
     }
     .mob-only{
         display: block;
+    }
+    .desk-only{
+        display: none !important;
     }
     .hom{
         display: none;
