@@ -734,6 +734,12 @@ input[type="button"]{
     *, html, body{
         font-size: 14px;
     }
+    .header a.brand img{
+        height: 30px;
+    }
+    .menu-link.btn-1 {
+        padding: 13px 24px 10px 24px !important;
+    }
     .mob-only{
         display: block;
     }
