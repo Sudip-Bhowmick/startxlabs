@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="css/slick.min.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.min.js"></script>
 </head>
@@ -55,141 +54,137 @@
             </div>
         </header>
 
-        <div id="fullPage">
-            <section id="hero" class="pt_80 pb_155 vertical-scrolling h-auto">
+        <section id="hero" class="pt_80 pb_155 vertical-scrolling h-auto">
 
-                <div class="cursor"></div>
+            <div class="cursor"></div>
 
-                <script>
-                    function myFunc() {
-                        var cursor = document.querySelector('.cursor');
-                        // var links = document.querySelectorAll('a');
+            <script>
+                function myFunc() {
+                    var cursor = document.querySelector('.cursor');
+                    // var links = document.querySelectorAll('a');
 
-                        var xMousePos = 0;
-                        var yMousePos = 0;
-                        var lastScrolledLeft = 0;
-                        var lastScrolledTop = 0;
+                    var xMousePos = 0;
+                    var yMousePos = 0;
+                    var lastScrolledLeft = 0;
+                    var lastScrolledTop = 0;
 
-                        $(document).mousemove(function (event) {
-                            captureMousePosition(event);
-                        })
+                    $(document).mousemove(function (event) {
+                        captureMousePosition(event);
+                    })
 
-                        // $(window).scroll(function (event) {
-                        //     if (lastScrolledLeft != $(document).scrollLeft()) {
-                        //         xMousePos -= lastScrolledLeft;
-                        //         lastScrolledLeft = $(document).scrollLeft();
-                        //         xMousePos += lastScrolledLeft;
-                        //     }
-                        //     if (lastScrolledTop != $(document).scrollTop()) {
-                        //         yMousePos -= lastScrolledTop;
-                        //         lastScrolledTop = $(document).scrollTop();
-                        //         yMousePos += lastScrolledTop;
-                        //     }
-                        //     window.status = "x = " + xMousePos + " y = " + yMousePos;
-                        // });
-                        function captureMousePosition(event) {
-                            xMousePos = event.pageX;
-                            yMousePos = event.pageY;
-                        }
+                    // $(window).scroll(function (event) {
+                    //     if (lastScrolledLeft != $(document).scrollLeft()) {
+                    //         xMousePos -= lastScrolledLeft;
+                    //         lastScrolledLeft = $(document).scrollLeft();
+                    //         xMousePos += lastScrolledLeft;
+                    //     }
+                    //     if (lastScrolledTop != $(document).scrollTop()) {
+                    //         yMousePos -= lastScrolledTop;
+                    //         lastScrolledTop = $(document).scrollTop();
+                    //         yMousePos += lastScrolledTop;
+                    //     }
+                    //     window.status = "x = " + xMousePos + " y = " + yMousePos;
+                    // });
+                    function captureMousePosition(event) {
+                        xMousePos = event.pageX;
+                        yMousePos = event.pageY;
+                    }
 
-                        var editCursor = function editCursor(event) {
-                            cursor.style.left = xMousePos + 'px';
-                            cursor.style.top = yMousePos + 'px';
-                        };
+                    var editCursor = function editCursor(event) {
+                        cursor.style.left = xMousePos + 'px';
+                        cursor.style.top = yMousePos + 'px';
+                    };
 
-                        window.addEventListener('mousemove', editCursor);
-                        // window.addEventListener('scroll', editCursor);
-                    }; myFunc();
-                </script>
+                    window.addEventListener('mousemove', editCursor);
+                    // window.addEventListener('scroll', editCursor);
+                }; myFunc();
+            </script>
 
 
-                <div class="blur">
-                    <img src="img/blur.png" class="img-responsive">
-                </div>
-                <div class="blur2">
-                    <img src="img/blur-2.png" class="img-responsive">
-                </div>
-                <div class="container">
-                    <div class="grid two-equal-col">
-                        <div class="pt_40 flex">
-                            <h1 class="text_lg regular">
-                                <strong>We Design, Develop and
-                                    Market</strong> state-of-the-art
-                                digital solutions for you
-                            </h1>
-                            <p class="grey pt_40 medium">
-                                Design, Web & App Development executed with
-                                <span class="blue bold">Strategy, Experience and Expertise</span>
-                            </p>
-                        </div>
-                        <div>
-                            <div class="form" id="form">
-                                <h2 class="text_xs pb_16 mob-only">Contact Us</h2>
-                                <form>
-                                    <input type="text" name="name" id="name" placeholder="Name *" required="">
-                                    <input type="tel" name="mobileNumber" id="mobileNumber"
-                                        placeholder="Mobile Number *" required="">
-                                    <input type="email" name="emailId" id="emailId" placeholder="Email ID *"
-                                        required="">
-                                    <textarea name="message" id="message" cols="30" rows="4"
-                                        placeholder="Message..."></textarea>
+            <div class="blur">
+                <img src="img/blur.png" class="img-responsive">
+            </div>
+            <div class="blur2">
+                <img src="img/blur-2.png" class="img-responsive">
+            </div>
+            <div class="container">
+                <div class="grid two-equal-col">
+                    <div class="pt_40 flex">
+                        <h1 class="text_lg regular">
+                            <strong>We Design, Develop and
+                                Market</strong> state-of-the-art
+                            digital solutions for you
+                        </h1>
+                        <p class="grey pt_40 medium">
+                            Design, Web & App Development executed with
+                            <span class="blue bold">Strategy, Experience and Expertise</span>
+                        </p>
+                    </div>
+                    <div>
+                        <div class="form" id="form">
+                            <h2 class="text_xs pb_16 mob-only">Contact Us</h2>
+                            <form>
+                                <input type="text" name="name" id="name" placeholder="Name *" required="">
+                                <input type="tel" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number *"
+                                    required="">
+                                <input type="email" name="emailId" id="emailId" placeholder="Email ID *" required="">
+                                <textarea name="message" id="message" cols="30" rows="4"
+                                    placeholder="Message..."></textarea>
 
-                                    <input type="submit" value="Submit" class="btn-1 full-width">
-                                </form>
-                            </div>
+                                <input type="submit" value="Submit" class="btn-1 full-width">
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
 
-            <section id="counters" class="pt_120 pb_60 vertical-scrolling h-auto">
-                <div class="container">
-                    <div class="flex pb_30">
-                        <div>
-                            <p class="justify pt_30 medium">
-                                StartxLabs provide expert software design and development services so you can create
-                                innovative world-class products. Our offshore development teams deliver the benefits of
-                                tech
-                                expertise. We work hard to deliver <strong class="blue medium font-inherit">100% client
-                                    satisfaction</strong>
-                                and get growth for our
-                                customer's business.
-                            </p>
-                        </div>
-                        <div>
-                            <div class="counter-box special">
-                                <div class="number">
-                                    <span>110</span><span>+</span>
-                                </div>
-                                <p>Happy Clients</p>
-                            </div>
-                        </div>
+        <section id="counters" class="pt_120 pb_60 vertical-scrolling h-auto">
+            <div class="container">
+                <div class="flex pb_30">
+                    <div>
+                        <p class="justify pt_30 medium">
+                            StartxLabs provide expert software design and development services so you can create
+                            innovative world-class products. Our offshore development teams deliver the benefits of
+                            tech
+                            expertise. We work hard to deliver <strong class="blue medium font-inherit">100% client
+                                satisfaction</strong>
+                            and get growth for our
+                            customer's business.
+                        </p>
                     </div>
-                    <div class="flex three-equal-col pb_16 pt_30">
-                        <div class="counter-box active">
+                    <div>
+                        <div class="counter-box special">
                             <div class="number">
-                                <span>100</span><span>+</span>
+                                <span>110</span><span>+</span>
                             </div>
-                            <p>Engineers and consultants</p>
-                        </div>
-                        <div class="counter-box active">
-                            <div class="number">
-                                <span>08</span><span>+</span>
-                            </div>
-                            <p>years of Experience</p>
-                        </div>
-                        <div class="counter-box active regular text_xl pb_40">
-                            <div class="number">
-                                <span>50</span><span>+</span>
-                            </div>
-                            <p>Global Enterprises Served</p>
+                            <p>Happy Clients</p>
                         </div>
                     </div>
                 </div>
-            </section>
-
-        </div>
+                <div class="flex three-equal-col pb_16 pt_30">
+                    <div class="counter-box active">
+                        <div class="number">
+                            <span>100</span><span>+</span>
+                        </div>
+                        <p>Engineers and consultants</p>
+                    </div>
+                    <div class="counter-box active">
+                        <div class="number">
+                            <span>08</span><span>+</span>
+                        </div>
+                        <p>years of Experience</p>
+                    </div>
+                    <div class="counter-box active regular text_xl pb_40">
+                        <div class="number">
+                            <span>50</span><span>+</span>
+                        </div>
+                        <p>Global Enterprises Served</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="reviews" class="pb_60 h-auto">
             <div class="container">
@@ -613,19 +608,19 @@
                 <div class="flex pt_60 tech-row">
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/python.png" alt="python" class="img-fluid">
+                            <img src="img/python.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Python</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/postgre.png" alt="PostgreSQL" class="img-fluid">
+                            <img src="img/postgre.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">PostgreSQL</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/node.png" alt="node" class="img-fluid">
+                            <img src="img/node.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Node Js</p>
                     </div>
@@ -637,88 +632,148 @@
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/mongodb.png" alt="mongodb" class="img-fluid">
+                            <img src="img/mongodb.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">MongoDB</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/html.png" alt="html" class="img-fluid">
+                            <img src="img/html.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">HTML5</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/django.png" alt="django" class="img-fluid">
+                            <img src="img/django.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Django</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/css.png" alt="css" class="img-fluid">
+                            <img src="img/css.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center" class="img-fluid">CSS3</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/react.png" alt="react" class="img-fluid">
+                            <img src="img/react.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">React Js</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/vue.png" alt="vue" class="img-fluid">
+                            <img src="img/vue.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Vue Js</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/shopify.png" alt="shopify" class="img-fluid">
+                            <img src="img/shopify.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Shopify</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/wordpress.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Wordpress</p>
                     </div>
 
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/android.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Android</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/app-store.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">App store</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/abc.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Wordpress</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/abc-1.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Wordpress</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/github.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Github</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/Group-2131.png" class="img-fluid">
                         </div>
                         <p class="text_xxxs semi-bold text-center">Wordpress</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/aws.png" class="img-fluid">
                         </div>
-                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                        <p class="text_xxxs semi-bold text-center">AWS</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/Group-2132.png" class="img-fluid">
                         </div>
-                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                        <p class="text_xxxs semi-bold text-center">AWS</p>
                     </div>
                     <div class="tech-box">
                         <div class="circular-box">
-                            <img src="img/wordpress.png" alt="wordpress" class="img-fluid">
+                            <img src="img/docker.png" class="img-fluid">
                         </div>
-                        <p class="text_xxxs semi-bold text-center">Wordpress</p>
+                        <p class="text_xxxs semi-bold text-center">Docker</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/Group-2133.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Docker</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/angular.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Angular</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/Group-2134.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Angular</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/Group-2135.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Angular</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/php.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">PHP</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/asp.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">ASP.NET</p>
+                    </div>
+                    <div class="tech-box">
+                        <div class="circular-box">
+                            <img src="img/drupal.png" class="img-fluid">
+                        </div>
+                        <p class="text_xxxs semi-bold text-center">Drupal</p>
                     </div>
                 </div>
 
@@ -967,7 +1022,6 @@
     <script src="js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.6/dist/js/splide.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 
     <script>
         ScrollOut({
@@ -975,18 +1029,6 @@
             once: true,
         });
     </script>
-    <!-- <script>
-        $('#fullPage').fullpage({
-            sectionSelector: '.vertical-scrolling',
-            // navigation: true,
-            // autoScrolling: false,
-            fitToSection: false,
-            keyboardScrolling: true,
-            easingcss3: "ease-in-out",
-            verticalCentered: true,
-            scrollBar: true
-        });
-    </script> -->
     <script>
         $('.testimonialSlider').slick({
             variableWidth: true,
@@ -1040,9 +1082,9 @@
                 autoWidth: true,
                 isNavigation: true,
                 gap: 10,
-                arrows: false,
+                arrows: true,
                 // focus: 'center',
-                pagination: false,
+                pagination: true,
                 // cover: true,
                 drag: 'free',
                 focus: 'center',
@@ -1054,6 +1096,14 @@
                 arrows: false,
                 cover: true,
                 // perPage: 1,
+                breakpoints: {
+                    767: {
+                        rewind: true,
+                        isNavigation: true,
+                        arrows: true,
+                        pagination: true,
+                    },
+                }
             });
 
             servicesSliderOne.sync(thumbnails).mount();
@@ -1063,6 +1113,9 @@
         $(window).on('load resize', function () {
             var totalSlide = $('.slick-dots li').length;
             $('.slick-dots li').css('width', 'calc(100% / ' + totalSlide + ')')
+
+            var totalServiceSlide = $('.splide__pagination li').length;
+            $('.splide__pagination li').css('width', 'calc(100% / ' + totalServiceSlide + ')')
         });
 
         function firstSection() {
@@ -1087,7 +1140,7 @@
 
             var items = $(".tech-box").length;
             $("#more-tech").click(function () {
-                shown = $(".tech-box:visible").length + 6;
+                shown = $(".tech-box:visible").length + 12;
                 if (shown < items) {
                     $(".tech-box:lt(" + shown + ")").show();
                 } else {

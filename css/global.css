@@ -565,6 +565,33 @@ ul.slick-dots li button::before{
     display: none;
 }
 
+ul.splide__pagination {
+    position: relative;
+    bottom: -15px;
+    /* max-width: 880px; */
+    max-width: calc(90% - 262px);
+    text-align: left;
+}
+
+.servicesSliderTwo .splide__track{
+    min-height: 310px;
+}
+
+button.splide__pagination__page {
+    background-color: #999999;
+    height: 1px;
+    width: 100%;
+    padding: 0;
+}
+.splide__pagination__page.is-active{
+    background-color: #05142D !important;
+    height: 3px;
+    top: 1px;
+    border-radius: 0px;
+    transform: scale(1) !important;
+}
+
+
 .align-center{
     align-items: center;
 }
