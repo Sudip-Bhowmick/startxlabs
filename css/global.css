@@ -721,6 +721,15 @@ input[type="button"]{
     display: block !important;
 }
 
+@media(max-width: 1024px) and (min-width: 768px){
+    .footer-flex > div:not(:first-child) {
+        width: calc(50%/2);
+    }
+    .icon-box br{
+        display: none;
+    }
+}
+
 @media(max-width: 767px){
     *, html, body{
         font-size: 14px;
