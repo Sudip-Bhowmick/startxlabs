@@ -394,6 +394,7 @@ footer{
     /* display: none; */
     width: 27vw;
     min-height: 54.1666666667vw;
+    font-size: 16px;
 }
 /* .card-item:hover{
     box-shadow: 26px 10px 16px 0px #0000000D;
@@ -423,6 +424,10 @@ footer{
     color: var(--grey);
     /* font-weight: 500; */
     font-size: 16px;
+}
+.card-item .location{
+    color: var(--grey);
+    margin-top: 14px;
     border-bottom: 1px solid rgba(226,228,233,.5);
     margin-bottom: 30px;
 }
