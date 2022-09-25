@@ -60,6 +60,7 @@ section:not(.hero){
     
     #cards .container,
     #counters .container,
+    #reviews .container,
     #web-technologies .container,
     #why .container,
     #contact .container{
@@ -190,16 +191,28 @@ footer{
     justify-content: space-between;
     /* justify-content: space-evenly; */
 }
+
 .counter-box{
     padding: 20px;
     border-radius: 12px;
     cursor: default;
     transition: 0.3s ease;
+    text-align: center;
+}
+
+.icon-box img {
+    width: 24px;
 }
 
 @media(min-width: 768px){
     .counter-box:hover, .counter-box.active{
         box-shadow: -6px 6px 15px 0px #00000014;
+    }
+    #counters .flex.three-equal-col{
+        gap: 30px;
+    }
+    .counter-box{
+        width: 100%;
     }
 }
 
@@ -280,6 +293,7 @@ footer{
 .service-box h3{
     font-size: 16px;
     font-weight: 600;
+    transition: margin .3s;
 }
 .servicesSliderTwo .splide__slide{
     transition: 0.3s ease;
@@ -291,9 +305,14 @@ footer{
 .service-box:focus, .swiper-slide-active .service-box,
 .servicesSliderTwo .splide__slide.is-active .service-box{
     width: 320px;
+    height: 270px;
     color: #fff;
     background-color: var(--blue);
     box-shadow: none;
+}
+.servicesSliderTwo .splide__slide.is-active .service-box h3{
+    font-weight: 700;
+    margin-top: 30px;
 }
 .service-box:hover img{
     rotate: 180deg;
@@ -489,6 +508,9 @@ footer{
     padding-top: 2px;
     display: block;
 }
+.font-inherit{
+    font-size: inherit;
+}
 
 @media(max-width: 1366px) and (min-width: 768px){
     .circular-box{
@@ -498,6 +520,9 @@ footer{
 }
 
 @media(max-width: 767px){
+    .icon-box img {
+        width: 20px;
+    }
     #hero p.grey.pt_40.medium {
         font-size: 120%;
         line-height: 1.6;
@@ -547,9 +572,9 @@ footer{
         flex-direction: column;
         justify-content: space-evenly;
     }
-    #counters .justify{
+    /* #counters .justify{
         text-align: center;
-    }
+    } */
     #reviews {
         padding-bottom: 80px;
     }
