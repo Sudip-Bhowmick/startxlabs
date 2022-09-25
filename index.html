@@ -1093,7 +1093,7 @@
             const servicesSliderOne = new Splide('.servicesSliderOne', {
                 type: 'fade',
                 pagination: false,
-                arrows: false,
+                arrows: true,
                 cover: true,
                 // perPage: 1,
                 breakpoints: {
@@ -1114,8 +1114,11 @@
             var totalSlide = $('.slick-dots li').length;
             $('.slick-dots li').css('width', 'calc(100% / ' + totalSlide + ')')
 
-            var totalServiceSlide = $('.splide__pagination li').length;
-            $('.splide__pagination li').css('width', 'calc(100% / ' + totalServiceSlide + ')')
+            var totalServiceSlide = $('.servicesSliderTwo .splide__pagination li').length;
+            $('.servicesSliderTwo .splide__pagination li').css('width', 'calc(100% / ' + totalServiceSlide + ')')
+
+            var totalServiceSlideOne = $('.servicesSliderOne .splide__pagination li').length;
+            $('.servicesSliderOne .splide__pagination li').css('width', 'calc(100% / ' + totalServiceSlideOne + ')')
         });
 
         function firstSection() {

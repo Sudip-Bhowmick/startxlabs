@@ -547,10 +547,31 @@ footer{
     }
 }
 
+@media(min-width: 768px){
+    .servicesSliderOne .splide__arrow{
+        display: none !important;
+    }
+}
+
 @media(max-width: 767px){
     .servicesSliderOne ul.splide__pagination{
-        max-width: 100%;
+        max-width: 80%;
         width: 100%;
+        margin: auto;
+        bottom: -11px;
+    }
+    .splide__arrow{
+        width: 30px;
+        height: 30px;
+        bottom: -14px;
+    }
+    .splide__arrow--next{
+        left: auto;
+        right: 17px;
+    }
+    .splide__arrow--prev{
+        right: auto;
+        left: 17px;
     }
     .icon-box img {
         width: 20px;
